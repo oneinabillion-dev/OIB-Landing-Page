@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lunexa Design System - Luxury AI Crypto Trading */
+
+@layer base {
+  :root {
+    /* Dark luxury theme */
+    --background: 220 27% 8%;
+    --foreground: 220 9% 96%;
+
+    /* Card with glassmorphic effect */
+    --card: 220 27% 12%;
+    --card-foreground: 220 9% 96%;
+
+    --popover: 220 27% 12%;
+    --popover-foreground: 220 9% 96%;
+
+    /* Primary blue accent inspired by Lunexa branding */
+    --primary: 213 94% 68%;
+    --primary-foreground: 220 27% 8%;
+    --primary-glow: 213 94% 78%;
+
+    --secondary: 220 27% 15%;
+    --secondary-foreground: 220 9% 96%;
+
+    --muted: 220 27% 15%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 220 27% 18%;
+    --accent-foreground: 220 9% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 96%;
+
+    --border: 220 27% 20%;
+    --input: 220 27% 15%;
+    --ring: 213 94% 68%;
+
+    --radius: 1rem;
+
+    /* Custom luxury tokens */
+    --glass-bg: 220 27% 12% / 0.6;
+    --glass-border: 220 27% 25% / 0.3;
+    --shadow-glow: 213 94% 68% / 0.2;
+    --shadow-dark: 220 50% 3% / 0.4;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 78%));
+    --gradient-glass: linear-gradient(135deg, hsl(220 27% 12% / 0.6), hsl(220 27% 15% / 0.4));
+    --gradient-hero: linear-gradient(180deg, hsl(220 27% 8%), hsl(220 35% 6%));
+    --gradient-flow: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Neumorphism shadows */
+    --neuma-shadow-light: 0 4px 8px hsl(220 27% 20% / 0.3);
+    --neuma-shadow-dark: inset 0 2px 4px hsl(220 50% 3% / 0.5);
+    --neuma-glow: 0 0 20px hsl(213 94% 68% / 0.4);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Keep dark theme consistent - we're using dark luxury theme by default */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light;
+    font-family: 'Inter', sans-serif;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+  }
+
+  /* Glass morphism utility */
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  /* Neumorphic button */
+  .neuma-btn {
+    background: var(--gradient-primary);
+    box-shadow: var(--neuma-shadow-light), var(--neuma-shadow-dark);
+    transition: var(--transition-glow);
+  }
+
+  .neuma-btn:hover {
+    box-shadow: var(--neuma-shadow-light), var(--neuma-shadow-dark), var(--neuma-glow);
+  }
+
+  /* Tight letter spacing for headings */
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+    font-weight: 300;
+  }
+
+  /* Lower opacity for body text */
+  p, span:not(.heading) {
+    opacity: 0.85;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}

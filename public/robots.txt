@@ -1,0 +1,31 @@
+# robots.txt for One In a Billion (OIB)
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://myoib.com/sitemap.xml
+
+# Disallow specific paths if needed
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /api/
+
+# Crawl-delay
+User-agent: *
+Crawl-delay: 1
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
