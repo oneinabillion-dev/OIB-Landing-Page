@@ -17,16 +17,16 @@ const MissionSection = () => {
           
           <div className="glass rounded-2xl p-8 md:p-12">
             <p className="text-xl md:text-2xl text-foreground mb-6 leading-relaxed">
-              We believe that advanced AI trading technology should be accessible to everyone, 
-              not just institutional investors.
+            Where rare innovation meets real results - One In a Billion transforms businesses 
+            through cutting-edge AI solutions and strategic consulting.
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Lunexa was built to democratize crypto trading by providing retail investors 
-              with the same sophisticated tools and algorithms that were previously only 
-              available to hedge funds and trading firms. Our mission is to level the 
-              playing field and help individuals achieve their financial goals through 
-              intelligent, automated trading strategies.
+              We specialize in bridging the gap between visionary ideas and practical 
+              implementation. Our team of AI experts and business strategists work 
+              alongside entrepreneurs to unlock unprecedented growth opportunities 
+              through intelligent automation, data-driven insights, and scalable 
+              technology solutions.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mt-12">

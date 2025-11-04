@@ -59,7 +59,7 @@ const Careers = () => {
               className="max-w-4xl mx-auto text-center"
             >
               <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-6">
-                Join Our <span className="bg-gradient-primary bg-clip-text text-transparent">Mission</span>
+                Join Our <span className="text-[#34A853]">Mission</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
                 Help us build the future where every rare idea gets a chance to become real. 

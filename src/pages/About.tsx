@@ -48,7 +48,7 @@ const About = () => {
               className="max-w-4xl mx-auto text-center"
             >
               <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-6">
-                About <span className="bg-gradient-primary bg-clip-text text-transparent">One In a Billion</span>
+                About <span className="text-[#34A853]">One In a</span> Billion
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
               Empowering businesses with cutting-edge AI solutions and strategic consulting. Where rare innovation meets real results.

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lunexa Design System - Luxury AI Crypto Trading */
+/* Design System - Luxury AI Crypto Trading */
 
 @layer base {
   :root {
@@ -17,10 +17,10 @@
     --popover: 220 27% 12%;
     --popover-foreground: 220 9% 96%;
 
-    /* Primary blue accent inspired by Lunexa branding */
-    --primary: 213 94% 68%;
+    /* Primary premium green accent */
+    --primary: 142 53% 43%;
     --primary-foreground: 220 27% 8%;
-    --primary-glow: 213 94% 78%;
+    --primary-glow: 142 53% 50%;
 
     --secondary: 220 27% 15%;
     --secondary-foreground: 220 9% 96%;
@@ -36,21 +36,21 @@
 
     --border: 220 27% 20%;
     --input: 220 27% 15%;
-    --ring: 213 94% 68%;
+    --ring: 142 53% 43%;
 
     --radius: 1rem;
 
     /* Custom luxury tokens */
     --glass-bg: 220 27% 12% / 0.6;
     --glass-border: 220 27% 25% / 0.3;
-    --shadow-glow: 213 94% 68% / 0.2;
+    --shadow-glow: 142 53% 43% / 0.2;
     --shadow-dark: 220 50% 3% / 0.4;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 78%));
+    --gradient-primary: linear-gradient(96.51deg, #0F2027 4.42%, #34A853 96.69%);
     --gradient-glass: linear-gradient(135deg, hsl(220 27% 12% / 0.6), hsl(220 27% 15% / 0.4));
     --gradient-hero: linear-gradient(180deg, hsl(220 27% 8%), hsl(220 35% 6%));
-    --gradient-flow: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+    --gradient-flow: linear-gradient(to right, #0F2027, #1a4535, #256b43, #34A853, #256b43, #1a4535, #0F2027);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,7 +59,7 @@
     /* Neumorphism shadows */
     --neuma-shadow-light: 0 4px 8px hsl(220 27% 20% / 0.3);
     --neuma-shadow-dark: inset 0 2px 4px hsl(220 50% 3% / 0.5);
-    --neuma-glow: 0 0 20px hsl(213 94% 68% / 0.4);
+    --neuma-glow: 0 0 20px hsl(142 53% 43% / 0.4);
 
     --sidebar-background: 0 0% 98%;
 
@@ -88,7 +88,7 @@
 
   body {
     @apply bg-background text-foreground font-light;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     background: var(--gradient-hero);
     min-height: 100vh;
   }
@@ -105,10 +105,27 @@
     background: var(--gradient-primary);
     box-shadow: var(--neuma-shadow-light), var(--neuma-shadow-dark);
     transition: var(--transition-glow);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    font-weight: 500;
+    will-change: transform;
   }
 
   .neuma-btn:hover {
     box-shadow: var(--neuma-shadow-light), var(--neuma-shadow-dark), var(--neuma-glow);
+  }
+
+  .neuma-btn * {
+    color: white !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
+
+  .neuma-btn svg {
+    stroke: white !important;
   }
 
   /* Tight letter spacing for headings */

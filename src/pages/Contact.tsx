@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 99583 97800",
+      content: "+91 97736 36382",
       description: "Mon-Fri from 8am to 5pm"
     },
     {
@@ -67,11 +67,10 @@ const Contact = () => {
               className="max-w-4xl mx-auto text-center"
             >
               <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-6">
-                Get in <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
+                Get in <span className="text-[#34A853]">Touch</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-                Have a question about Lunexa? We'd love to hear from you. 
-                Send us a message and we'll respond as soon as possible.
+                Have a question about One In a Billion? Let's connect you with one of our consultants
               </p>
             </motion.div>
           </div>
@@ -217,7 +216,7 @@ const Contact = () => {
                 >
                   <h3 className="font-medium mb-2">Frequently Asked Questions</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Find quick answers to common questions about Lunexa
+                    Find quick answers to common questions about OIB
                   </p>
                   <a 
                     href="/#faq" 

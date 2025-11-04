@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="pt-2 md:pt-4 pb-12 md:pb-16 px-6">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,7 +11,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-8">
+          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-5">
             About One In a Billion
           </h2>
           

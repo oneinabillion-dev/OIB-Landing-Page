@@ -22,7 +22,8 @@ export default {
 				'xs': '475px',
 			},
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
+				'sans': ['DM Sans', 'sans-serif'],
+				'inter': ['DM Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -33,7 +33,16 @@ const Navigation = ({ isHomePage = false }: NavigationProps) => {
     setIsMobileMenuOpen(false);
     if (isHomePage) {
       const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: 'smooth' });
+      if (element) {
+        const headerOffset = 80; // Account for fixed navbar
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     } else {
       // If on other pages, navigate to homepage with hash
       navigate(`/${href}`);
@@ -104,7 +113,7 @@ const Navigation = ({ isHomePage = false }: NavigationProps) => {
             <div className="hidden sm:flex items-center gap-1.5 md:gap-2 lg:gap-3 flex-shrink-0">
               <motion.div whileHover={{ scale: 1.12 }} whileTap={{ scale: 1.06 }} className="will-change-transform">
                 <NeumaButton
-                  onClick={() => { window.location.href = "https://myoib.vercel.app/login"; }}
+                  onClick={() => { window.location.href = "https://chat.myoib.com/login"; }}
                   size="lg"
                   className="h-10 px-4 sm:px-5 md:px-6 rounded-full text-xs sm:text-xs md:text-sm font-medium transition-transform duration-300 tracking-wide relative whitespace-nowrap hover:shadow-glow focus:shadow-glow focus:outline-none"
                   data-aos="fade-down"
@@ -116,7 +125,7 @@ const Navigation = ({ isHomePage = false }: NavigationProps) => {
                   <span className="md:hidden">SIGN</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-primary-foreground transform transition-transform duration-150 ease-in-out group-hover:translate-x-1 flex-shrink-0"
+                    className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-white transform transition-transform duration-150 ease-in-out group-hover:translate-x-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -198,14 +207,14 @@ const Navigation = ({ isHomePage = false }: NavigationProps) => {
                   whileTap={{ scale: 1.05 }}
                 >
                   <NeumaButton
-                    onClick={() => { window.location.href = "https://myoib.vercel.app/login"; }}
+                    onClick={() => { window.location.href = "https://chat.myoib.com/login"; }}
                     size="lg"
                     className="h-11 w-full rounded-full text-sm font-medium inline-flex items-center justify-center gap-2 transition-transform duration-300 hover:shadow-glow focus:shadow-glow focus:outline-none"
                   >
                     SIGN IN
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-4 h-4 text-primary-foreground"
+                      className="w-4 h-4 text-white"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

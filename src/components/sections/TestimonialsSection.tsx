@@ -5,32 +5,6 @@ import { CaretLeft, CaretRight } from "phosphor-react";
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
-    {
-      text: "An efficient and user-friendly platform for crypto trading",
-      author: "Jane Aron",
-      result: "+245% Portfolio Growth",
-      role: "Crypto Investor"
-    },
-    {
-      text: "Lunexa's AI assistant helped me maximize my profile",
-      author: "John Doe",
-      result: "+189% Returns",
-      role: "Day Trader"
-    },
-    {
-      text: "A game-changer in the world of crypto trading",
-      author: "Emily Smith",
-      result: "+312% Profit",
-      role: "Portfolio Manager"
-    },
-    {
-      text: "The automation features saved me hours of analysis",
-      author: "Michael Chen",
-      result: "+156% Growth",
-      role: "Algorithmic Trader"
-    }
-  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -64,7 +38,7 @@ const TestimonialsSection = () => {
             Testimonials
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See what our users have achieved with Lunexa
+            See what our Clients have achieved with OIB
           </p>
         </motion.div>
 

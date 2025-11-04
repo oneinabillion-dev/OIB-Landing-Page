@@ -7,7 +7,7 @@ const neumaButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "neuma-btn text-primary-foreground",
+        default: "neuma-btn text-white font-medium antialiased",
         secondary: "glass border border-border hover:bg-accent/10",
         ghost: "hover:bg-accent/10 hover:text-accent-foreground",
         outline: "border border-border glass hover:bg-accent/10",

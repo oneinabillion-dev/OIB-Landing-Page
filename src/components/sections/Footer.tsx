@@ -57,13 +57,13 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: X, href: "", name: "X (Twitter)" },
-    { icon: InstagramLogo, href: "", name: "Instagram" },
-    { icon: LinkedinLogo, href: "", name: "LinkedIn" }
+    { icon: X, href: "https://x.com/oib_ai", name: "X (Twitter)" },
+    { icon: InstagramLogo, href: "https://www.instagram.com/raremeetsreal/", name: "Instagram" },
+    { icon: LinkedinLogo, href: "https://www.linkedin.com/company/oib-i-one-in-a-billion/", name: "LinkedIn" }
   ];
 
   return (
-    <footer className="py-20 px-6 border-t border-border/20">
+    <footer className="py-20 px-6 border-t border-border/20 glass">
       <div //className="container mx-auto">
       className="w-full px-4">
         <div className="grid md:grid-cols-5 gap-12 mb-12">
@@ -98,13 +98,16 @@ const Footer = () => {
               
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
-                  <div
+                  <a
                     key={social.name}
-                    className="w-10 h-10 glass rounded-lg flex items-center justify-center hover:bg-accent/10 transition-colors cursor-default"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 glass rounded-lg flex items-center justify-center hover:bg-accent/10 transition-colors cursor-pointer"
                     aria-label={social.name}
                   >
                     <social.icon size={18} weight="light" />
-                  </div>
+                  </a>
                 ))}
               </div>
             </motion.div>

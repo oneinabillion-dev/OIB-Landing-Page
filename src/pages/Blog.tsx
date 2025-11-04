@@ -66,7 +66,7 @@ const Blog = () => {
               className="max-w-4xl mx-auto text-center"
             >
               <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-6">
-                One In a Billion <span className="bg-gradient-primary bg-clip-text text-transparent">Blog</span>
+                One In a Billion <span className="text-[#34A853]">Blog</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
                 Insights, strategies, and the latest developments in AI-powered cryptocurrency trading

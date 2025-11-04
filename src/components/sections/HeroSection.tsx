@@ -95,48 +95,41 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-center px-3 xs:px-4 sm:px-6 md:px-8 pt-14 xs:pt-16 sm:pt-20 md:pt-24 overflow-hidden">
+    <section id="hero" className="relative min-h-[75vh] flex flex-col justify-start px-3 xs:px-4 sm:px-6 md:px-8 pt-0 pb-8 md:pb-10 overflow-hidden">
       {/* Background gradient effect */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 xs:opacity-25 sm:opacity-30 md:opacity-40 lg:opacity-50 z-0">
-        <div className="absolute top-16 xs:top-20 sm:top-24 right-0 w-32 xs:w-40 sm:w-48 md:w-64 lg:w-96 h-0 shadow-[0_0_200px_6px_rgba(255,255,255,0.2)] xs:shadow-[0_0_250px_7px_rgba(255,255,255,0.25)] sm:shadow-[0_0_300px_8px_rgba(255,255,255,0.3)] md:shadow-[0_0_500px_12px_rgba(255,255,255,0.35)] lg:shadow-[0_0_700px_15px_rgba(255,255,255,0.4)] rotate-[-30deg] z-0"></div>
-      </div>
+      <motion.div 
+        className="absolute top-0 right-0 w-1/2 h-full z-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0 }}
+      >
+        <div className="opacity-20 xs:opacity-25 sm:opacity-30 md:opacity-40 lg:opacity-50 h-full">
+          <motion.div 
+            className="absolute top-16 xs:top-20 sm:top-24 right-0 w-32 xs:w-40 sm:w-48 md:w-64 lg:w-96 h-0 shadow-[0_0_200px_6px_rgba(255,255,255,0.2)] xs:shadow-[0_0_250px_7px_rgba(255,255,255,0.25)] sm:shadow-[0_0_300px_8px_rgba(255,255,255,0.3)] md:shadow-[0_0_500px_12px_rgba(255,255,255,0.35)] lg:shadow-[0_0_700px_15px_rgba(255,255,255,0.4)] rotate-[-30deg] z-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0 }}
+          ></motion.div>
+        </div>
+      </motion.div>
       
       <div //className="container mx-auto relative z-10">
       className="w-full px-4 sm:px-8 md:px-16">
         <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
           {/* Content */}
-          <div className="max-w-full lg:max-w-2xl text-center lg:text-left order-2 lg:order-1">
-            {/* Tag */}
-            <div 
-              className="relative w-48 xs:w-56 sm:w-64 md:w-72 h-8 xs:h-9 sm:h-10 rounded-full mb-6 xs:mb-7 sm:mb-8 mx-auto lg:mx-0 animate-gradient-flow"
-              style={{
-                background: 'linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565)',
-                backgroundSize: '200%',
-              }}
-              data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="300"
-              data-aos-duration="900"
-            >
-              <div className="absolute inset-[2px] xs:inset-[3px] bg-background rounded-full flex items-center justify-center transition-all duration-500 hover:text-primary cursor-pointer">
-                <span className="text-xs xs:text-sm sm:text-base font-medium tracking-wider">INTRODUCING</span>
-              </div>
-            </div>
-
+          <div className="max-w-full lg:max-w-2xl text-center lg:text-left -mt-0">
             <h1 
-              className="text-4xl xs:text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight mb-4 xs:mb-5 sm:mb-6 md:mb-7 lg:mb-8 leading-tight text-shadow-glow"
+              className="text-[34px] xs:text-[34px] sm:text-[34px] md:text-[34px] lg:text-[46px] xl:text-[58px] font-semibold tracking-tight mb-3 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-7 leading-[1.1] text-shadow-glow"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="300"
               data-aos-duration="1000"
             >
-              One In a Billion <br /> Chance for <span className="bg-gradient-primary bg-clip-text text-transparent">
-                ENTREPRENEURS
-              </span>
+              The only bridge from <br /> <span className="whitespace-nowrap">conception to<span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(96.51deg, #34A853 0%, #34A853 100%)'}}> Domination</span></span>
             </h1>
             
             <p 
-              className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 xs:mb-7 sm:mb-8 md:mb-10 lg:mb-12 max-w-full lg:max-w-xl leading-relaxed"
+              className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-muted-foreground mb-4 xs:mb-5 sm:mb-6 md:mb-8 lg:mb-10 max-w-full lg:max-w-xl leading-tight"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="300"
@@ -147,19 +140,19 @@ const HeroSection = () => {
             </p>
             
             <div 
-              className="flex flex-col gap-3 xs:gap-4 items-center justify-center lg:justify-start"
+              className="w-full max-w-2xl mx-auto lg:mx-0"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="0"
               data-aos-duration="1600"
             >
               {/* Action Buttons Row */}
-              <div className="flex flex-col sm:flex-row gap-2.5 xs:gap-3 sm:gap-4 items-center w-full max-w-xl -ml-20">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
                 <NeumaButton
                   variant="secondary"
                   size="lg"
                   onClick={() => navigate("/contact")}
-                  className="text-xs xs:text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 md:px-10 w-full sm:w-auto hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14"
+                  className="text-xs xs:text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 md:px-10 w-full sm:w-auto sm:flex-shrink-0 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14"
                 >
                   <span className="whitespace-nowrap">Connect with Consultant</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-80 xs:w-5 xs:h-5 sm:w-5 sm:h-5 flex-shrink-0">
@@ -171,17 +164,17 @@ const HeroSection = () => {
                   onClick={() => {
                     window.location.href = "https://chat.myoib.com";
                   }}
-                  className="text-xs xs:text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 md:px-10 font-bold w-full sm:w-auto hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14"
+                  className="text-xs xs:text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 md:px-10 font-bold w-full sm:flex-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14"
                 >
                   <span className="whitespace-nowrap">My OIB</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="opacity-80">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="opacity-80 flex-shrink-0">
                     <path d="M13 7L18 12L13 17M6 12H18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </NeumaButton>
               </div>
 
               {/* AI Prompt Input */}
-              <div className="relative w-full max-w-2xl">
+              <div className="relative w-full mt-3 sm:mt-4">
                 <div className="relative group">
                   <input
                     type="text"
@@ -194,11 +187,11 @@ const HeroSection = () => {
                   <button 
                     onClick={handleSubmit}
                     aria-label="Send prompt to My OIB"
-                    className="absolute right-1.5 xs:right-2 top-1/2 -translate-y-1/2 w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-lg xs:rounded-xl bg-gradient-primary hover:scale-110 hover:shadow-neuma-glow transition-all duration-300 flex items-center justify-center group"
+                    className="absolute right-1.5 xs:right-2 top-1/2 -translate-y-1/2 w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-lg xs:rounded-xl bg-gradient-primary hover:scale-110 hover:shadow-neuma-glow transition-all duration-300 flex items-center justify-center group text-white antialiased"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="opacity-85">
-                      <path d="M5 11H19M19 11L15 7M19 11L15 15" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M5 13H17" stroke="black" strokeWidth="0.8" strokeLinecap="round" opacity="0.5"/>
+                      <path d="M5 11H19M19 11L15 7M19 11L15 15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 13H17" stroke="white" strokeWidth="0.8" strokeLinecap="round" opacity="0.5"/>
                     </svg>
                   </button>
                 </div>
@@ -220,8 +213,8 @@ const HeroSection = () => {
                 <div 
                   className="absolute inset-0 w-[120%] h-[120%] -translate-x-[10%] -translate-y-[10%] scale-10"
                   dangerouslySetInnerHTML={{
-                    __html: `<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.53/build/spline-viewer.js"></script>
-                    <spline-viewer url="https://prod.spline.design/KQiUJMVrjxNI9IWR/scene.splinecode"></spline-viewer>`
+                    __html: `<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.92/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/KQiUJMVrjxNI9IWR/scene.splinecode"></spline-viewer>`
                   }}
                 />
               </div>
@@ -239,7 +232,7 @@ const HeroSection = () => {
               <div 
                 className="absolute inset-0 w-[100%] h-[130%] -translate-x-[15%] -translate-y-[15%]"
                 dangerouslySetInnerHTML={{
-                  __html: `<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.85/build/spline-viewer.js"></script>
+                  __html: `<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.92/build/spline-viewer.js"></script>
 <spline-viewer url="https://prod.spline.design/RveWLq4mLjG8aOBd/scene.splinecode"></spline-viewer>`
                 }}
               />

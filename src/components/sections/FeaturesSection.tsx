@@ -26,16 +26,16 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-20 px-6">
+    <section id="features" className="py-12 md:py-16 px-6">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-3">
             Our Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
