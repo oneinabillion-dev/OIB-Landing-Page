@@ -114,22 +114,22 @@ const HeroSection = () => {
       </motion.div>
       
       <div //className="container mx-auto relative z-10">
-      className="w-full px-2 sm:px-8 md:px-16">
+      className="w-full px-4 sm:px-8 md:px-16">
         <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
           {/* Content */}
-          <div className="max-w-full lg:max-w-2xl text-center lg:text-left -mt-0">
+          <div className="max-w-full lg:max-w-2xl text-center lg:text-left -mt-0 px-2 sm:px-0">
             <h1 
-              className="text-[34px] xs:text-[34px] sm:text-[34px] md:text-[34px] lg:text-[46px] xl:text-[58px] font-semibold tracking-tight mb-3 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-7 leading-[1.1] text-shadow-glow"
+              className="text-[34px] xs:text-[34px] sm:text-[34px] md:text-[34px] lg:text-[46px] xl:text-[58px] font-semibold tracking-tight mb-3 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-7 leading-[1.1] text-shadow-glow break-words"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="300"
               data-aos-duration="1000"
             >
-              The only bridge from <br /> <span className="whitespace-nowrap">conception to<span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(96.51deg, #34A853 0%, #34A853 100%)'}}> Domination</span></span>
+              The only bridge from <br /> <span className="whitespace-normal sm:whitespace-nowrap">conception to<span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(96.51deg, #34A853 0%, #34A853 100%)'}}> Domination</span></span>
             </h1>
             
             <p 
-              className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-muted-foreground mb-4 xs:mb-5 sm:mb-6 md:mb-8 lg:mb-10 max-w-full lg:max-w-xl leading-tight"
+              className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-muted-foreground mb-4 xs:mb-5 sm:mb-6 md:mb-8 lg:mb-10 max-w-full lg:max-w-xl leading-tight break-words px-1 sm:px-0"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="300"
@@ -140,21 +140,21 @@ const HeroSection = () => {
             </p>
             
             <div 
-              className="w-full max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0"
+              className="w-full max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0 overflow-hidden"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="0"
               data-aos-duration="1600"
             >
               {/* Action Buttons Row */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-full overflow-hidden">
                 <NeumaButton
                   variant="secondary"
                   size="lg"
                   onClick={() => navigate("/contact")}
-                  className="text-xs xs:text-sm sm:text-base md:text-lg px-3 xs:px-6 sm:px-8 md:px-10 w-full sm:w-auto sm:flex-shrink-0 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14 min-w-0"
+                  className="text-xs xs:text-sm sm:text-base md:text-lg px-3 xs:px-5 sm:px-8 md:px-10 w-full sm:w-auto sm:flex-shrink-0 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-1.5 xs:gap-2 sm:gap-3 h-10 xs:h-11 sm:h-12 md:h-14 min-w-0 max-w-full overflow-hidden"
                 >
-                  <span className="whitespace-nowrap sm:whitespace-normal">Connect with Consultant</span>
+                  <span className="whitespace-nowrap truncate sm:whitespace-normal">Connect with Consultant</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-80 xs:w-5 xs:h-5 sm:w-5 sm:h-5 flex-shrink-0">
                     <path d="M13 7L18 12L13 17M6 12H18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -164,9 +164,9 @@ const HeroSection = () => {
                   onClick={() => {
                     window.location.href = "https://chat.myoib.com";
                   }}
-                  className="text-xs xs:text-sm sm:text-base md:text-lg px-3 xs:px-6 sm:px-8 md:px-10 font-bold w-full sm:flex-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14 min-w-0"
+                  className="text-xs xs:text-sm sm:text-base md:text-lg px-3 xs:px-5 sm:px-8 md:px-10 font-bold w-full sm:flex-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-1.5 xs:gap-2 sm:gap-3 h-10 xs:h-11 sm:h-12 md:h-14 min-w-0 max-w-full overflow-hidden"
                 >
-                  <span className="whitespace-nowrap">My OIB</span>
+                  <span className="whitespace-nowrap truncate">My OIB</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="opacity-80 flex-shrink-0">
                     <path d="M13 7L18 12L13 17M6 12H18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -174,15 +174,15 @@ const HeroSection = () => {
               </div>
 
               {/* AI Prompt Input */}
-              <div className="relative w-full mt-3 sm:mt-4">
-                <div className="relative group">
+              <div className="relative w-full mt-3 sm:mt-4 max-w-full overflow-hidden">
+                <div className="relative group w-full">
                   <input
                     type="text"
                     value={promptText}
                     onChange={(e) => setPromptText(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder={displayText}
-                    className="w-full h-10 xs:h-11 sm:h-12 md:h-14 px-3 xs:px-5 sm:px-6 pr-10 xs:pr-14 sm:pr-16 rounded-xl xs:rounded-xl sm:rounded-2xl bg-background/10 backdrop-blur-lg border border-border/20 text-sm xs:text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
+                    className="w-full h-10 xs:h-11 sm:h-12 md:h-14 px-3 xs:px-5 sm:px-6 pr-10 xs:pr-14 sm:pr-16 rounded-xl xs:rounded-xl sm:rounded-2xl bg-background/10 backdrop-blur-lg border border-border/20 text-sm xs:text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300 max-w-full"
                   />
                   <button 
                     onClick={handleSubmit}
