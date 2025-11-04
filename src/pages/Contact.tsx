@@ -35,7 +35,7 @@ const Contact = () => {
     {
       icon: EnvelopeSimple,
       title: "Email",
-      content: "oneinabillion@myoib.com",
+      content: "contact@myoib.com",
       description: "Send us an email anytime"
     },
     {

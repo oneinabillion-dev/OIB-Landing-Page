@@ -96,7 +96,7 @@ const Careers = () => {
                     we'd love to hear from you.
                   </p>
                   <a
-                    href="mailto:harsh@myoib.com"
+                    href="mailto:careers@myoib.com"
                     className="inline-flex items-center gap-2 px-6 py-3 glass rounded-xl hover:bg-accent/10 transition-colors group"
                   >
                     <EnvelopeSimple size={20} weight="light" />
@@ -243,7 +243,7 @@ const Careers = () => {
                   who share our vision. Send us your resume and we'll reach out when opportunities arise.
                 </p>
                 <a
-                  href="mailto:harsh@myoib.com"
+                  href="mailto:careers@myoib.com"
                   className="inline-flex items-center gap-2 px-8 py-4 glass rounded-xl hover:bg-accent/10 transition-colors group text-lg"
                 >
                   <EnvelopeSimple size={24} weight="light" />
