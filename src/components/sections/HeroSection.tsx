@@ -114,7 +114,7 @@ const HeroSection = () => {
       </motion.div>
       
       <div //className="container mx-auto relative z-10">
-      className="w-full px-4 sm:px-8 md:px-16">
+      className="w-full px-2 sm:px-8 md:px-16">
         <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
           {/* Content */}
           <div className="max-w-full lg:max-w-2xl text-center lg:text-left -mt-0">
@@ -140,7 +140,7 @@ const HeroSection = () => {
             </p>
             
             <div 
-              className="w-full max-w-2xl mx-auto lg:mx-0"
+              className="w-full max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="0"
@@ -152,9 +152,9 @@ const HeroSection = () => {
                   variant="secondary"
                   size="lg"
                   onClick={() => navigate("/contact")}
-                  className="text-xs xs:text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 md:px-10 w-full sm:w-auto sm:flex-shrink-0 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14"
+                  className="text-xs xs:text-sm sm:text-base md:text-lg px-3 xs:px-6 sm:px-8 md:px-10 w-full sm:w-auto sm:flex-shrink-0 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14 min-w-0"
                 >
-                  <span className="whitespace-nowrap">Connect with Consultant</span>
+                  <span className="whitespace-nowrap sm:whitespace-normal">Connect with Consultant</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-80 xs:w-5 xs:h-5 sm:w-5 sm:h-5 flex-shrink-0">
                     <path d="M13 7L18 12L13 17M6 12H18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -164,7 +164,7 @@ const HeroSection = () => {
                   onClick={() => {
                     window.location.href = "https://chat.myoib.com";
                   }}
-                  className="text-xs xs:text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 md:px-10 font-bold w-full sm:flex-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14"
+                  className="text-xs xs:text-sm sm:text-base md:text-lg px-3 xs:px-6 sm:px-8 md:px-10 font-bold w-full sm:flex-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 xs:gap-3 h-10 xs:h-11 sm:h-12 md:h-14 min-w-0"
                 >
                   <span className="whitespace-nowrap">My OIB</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="opacity-80 flex-shrink-0">
@@ -182,7 +182,7 @@ const HeroSection = () => {
                     onChange={(e) => setPromptText(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder={displayText}
-                    className="w-full h-10 xs:h-11 sm:h-12 md:h-14 px-4 xs:px-5 sm:px-6 pr-12 xs:pr-14 sm:pr-16 rounded-xl xs:rounded-xl sm:rounded-2xl bg-background/10 backdrop-blur-lg border border-border/20 text-sm xs:text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
+                    className="w-full h-10 xs:h-11 sm:h-12 md:h-14 px-3 xs:px-5 sm:px-6 pr-10 xs:pr-14 sm:pr-16 rounded-xl xs:rounded-xl sm:rounded-2xl bg-background/10 backdrop-blur-lg border border-border/20 text-sm xs:text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
                   />
                   <button 
                     onClick={handleSubmit}

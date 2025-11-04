@@ -23,7 +23,7 @@ const Index = () => {
       <div className="fixed top-0 left-0 w-full h-full -z-[9] bg-background/20 pointer-events-none" />
       <Navigation isHomePage={true} />
       {/* Introducing Tag - Centered below navbar */}
-      <div className="flex justify-center items-center pt-16 sm:pt-20 lg:pt-24 pb-0 relative z-10">
+      <div className="flex justify-center items-center pt-16 sm:pt-20 lg:pt-24 pb-0 mb-3 sm:mb-0 relative z-10">
         <div 
           className="relative w-48 xs:w-56 sm:w-64 md:w-72 h-8 xs:h-9 sm:h-10 rounded-full animate-gradient-flow"
           style={{
