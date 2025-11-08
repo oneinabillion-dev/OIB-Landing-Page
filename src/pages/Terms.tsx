@@ -2,12 +2,28 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/sections/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
+import { useSEO } from "@/hooks/useSEO";
 
 const Terms = () => {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // SEO and Breadcrumbs
+  useSEO({
+    title: "Terms of Service | One In a Billion (OIB) - Rare Meets Real",
+    description: "Read the Terms of Service for One In a Billion (OIB). Learn about our service terms, user conduct, and policies.",
+    canonical: "https://myoib.com/terms",
+    ogTitle: "Terms of Service | One In a Billion (OIB)",
+    ogDescription: "Read the Terms of Service for One In a Billion (OIB). Learn about our service terms, user conduct, and policies.",
+    ogImage: "https://myoib.com/images/White_Logo.png",
+    breadcrumbs: [
+      { name: "Home", url: "https://myoib.com/" },
+      { name: "Terms of Service", url: "https://myoib.com/terms" }
+    ]
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -19,6 +35,9 @@ const Terms = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
+          <Breadcrumb items={[
+            { name: "Terms of Service", url: "/terms" }
+          ]} />
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-shadow-glow">
             Terms of Service
           </h1>

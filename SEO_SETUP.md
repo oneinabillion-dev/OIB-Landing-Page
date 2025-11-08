@@ -54,7 +54,7 @@ Three types of structured data added:
 - Proper crawl delay settings
 
 ### 6. Image Optimization
-- Enhanced alt text: "One In a Billion Logo - OIB AI Consultancy"
+- Enhanced alt text: "One In a Billion Logo - OIB"
 - All logo images now include descriptive, keyword-rich alt text
 
 ### 7. Brand Keyword Integration
@@ -94,7 +94,7 @@ With these optimizations, your website should appear when users search for:
 3. **"myoib"**
 4. **"myoib.com"**
 5. **"AI consultancy"**
-6. **"startup incubator"**
+6. **"startup"**
 7. **"One In a Billion consultancy"**
 8. **"OIB AI solutions"**
 
@@ -191,7 +191,7 @@ With these optimizations, your website should appear when users search for:
 
 ### Secondary Keywords (Medium Priority)
 - AI consultancy services
-- Startup incubator
+- Startup
 - Business AI solutions
 - Technology consulting
 - Digital transformation consulting
@@ -200,7 +200,7 @@ With these optimizations, your website should appear when users search for:
 ### Long-tail Keywords (Low Competition)
 - Best AI consultancy for startups
 - Custom AI solutions for businesses
-- Startup incubator programs
+- Startup programs
 - Technology consulting companies
 - AI strategy development
 

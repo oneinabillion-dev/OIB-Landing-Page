@@ -79,7 +79,7 @@ const Navigation = ({ isHomePage = false }: NavigationProps) => {
             >
               <img 
                 src="/images/White_Logo.png" 
-                alt="One In a Billion Logo - OIB AI Consultancy" 
+                alt="One In a Billion Logo - OIB" 
                 className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex-shrink-0" 
               />
               <div className="flex flex-col min-w-0">

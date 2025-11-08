@@ -124,8 +124,8 @@
 4. "myoib.com" - Domain-specific
 
 ### Service Keywords
-5. "AI consultancy"
-6. "startup incubator"
+5. "AI"
+6. "startup"
 7. "technology consulting"
 8. "business AI solutions"
 

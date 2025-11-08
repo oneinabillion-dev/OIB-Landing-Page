@@ -2,13 +2,29 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/sections/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Brain, Shield, Users, Target } from "phosphor-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const About = () => {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // SEO and Breadcrumbs
+  useSEO({
+    title: "About Us | One In a Billion (OIB) - Rare Meets Real",
+    description: "Learn about One In a Billion (OIB). Empowering businesses with cutting-edge AI solutions and strategic consulting. Where rare innovation meets real results.",
+    canonical: "https://myoib.com/about",
+    ogTitle: "About Us | One In a Billion (OIB)",
+    ogDescription: "Learn about One In a Billion (OIB). Empowering businesses with cutting-edge AI solutions and strategic consulting.",
+    ogImage: "https://myoib.com/images/White_Logo.png",
+    breadcrumbs: [
+      { name: "Home", url: "https://myoib.com/" },
+      { name: "About", url: "https://myoib.com/about" }
+    ]
+  });
 
   const values = [
     {
@@ -38,8 +54,17 @@ const About = () => {
       <Navigation />
       
       <main className="pt-20">
+        {/* Breadcrumb */}
+        <section className="pt-24 px-6">
+          <div className="container mx-auto max-w-6xl">
+            <Breadcrumb items={[
+              { name: "About", url: "/about" }
+            ]} />
+          </div>
+        </section>
+
         {/* Hero Section */}
-        <section className="py-20 px-6">
+        <section className="py-8 px-6">
           <div className="container mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

@@ -2,12 +2,28 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/sections/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
+import { useSEO } from "@/hooks/useSEO";
 
 const Privacy = () => {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // SEO and Breadcrumbs
+  useSEO({
+    title: "Privacy Policy | One In a Billion (OIB) - Rare Meets Real",
+    description: "Read the Privacy Policy for One In a Billion (OIB). Learn how we collect, use, and protect your personal information.",
+    canonical: "https://myoib.com/privacy",
+    ogTitle: "Privacy Policy | One In a Billion (OIB)",
+    ogDescription: "Read the Privacy Policy for One In a Billion (OIB). Learn how we collect, use, and protect your personal information.",
+    ogImage: "https://myoib.com/images/White_Logo.png",
+    breadcrumbs: [
+      { name: "Home", url: "https://myoib.com/" },
+      { name: "Privacy Policy", url: "https://myoib.com/privacy" }
+    ]
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -19,6 +35,9 @@ const Privacy = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
+          <Breadcrumb items={[
+            { name: "Privacy Policy", url: "/privacy" }
+          ]} />
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-shadow-glow">
             Privacy Policy
           </h1>

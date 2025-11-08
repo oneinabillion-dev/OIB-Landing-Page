@@ -2,14 +2,30 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/sections/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { NeumaButton } from "@/components/ui/neuma-button";
 import { EnvelopeSimple, MapPin, Phone } from "phosphor-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const Contact = () => {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // SEO and Breadcrumbs
+  useSEO({
+    title: "Contact Us | One In a Billion (OIB) - Rare Meets Real",
+    description: "Get in touch with One In a Billion. Contact us for AI consulting, startup incubation, and business transformation services.",
+    canonical: "https://myoib.com/contact",
+    ogTitle: "Contact Us | One In a Billion (OIB)",
+    ogDescription: "Get in touch with One In a Billion. Contact us for AI consulting, startup incubation, and business transformation services.",
+    ogImage: "https://myoib.com/images/White_Logo.png",
+    breadcrumbs: [
+      { name: "Home", url: "https://myoib.com/" },
+      { name: "Contact", url: "https://myoib.com/contact" }
+    ]
+  });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -57,8 +73,17 @@ const Contact = () => {
       <Navigation />
       
       <main className="pt-20">
+        {/* Breadcrumb */}
+        <section className="pt-24 px-6">
+          <div className="container mx-auto max-w-6xl">
+            <Breadcrumb items={[
+              { name: "Contact", url: "/contact" }
+            ]} />
+          </div>
+        </section>
+
         {/* Hero Section */}
-        <section className="py-20 px-6">
+        <section className="py-8 px-6">
           <div className="container mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

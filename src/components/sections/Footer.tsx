@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { X, InstagramLogo, LinkedinLogo } from "phosphor-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 const Footer = () => {
@@ -78,7 +78,7 @@ const Footer = () => {
               <div className="flex items-center gap-3 mb-4">
                 <img 
                   src="/images/White_Logo.png" 
-                  alt="One In a Billion Logo - OIB AI Consultancy" 
+                  alt="One In a Billion Logo - OIB" 
                   className="w-8 h-8 flex-shrink-0" 
                 />
                 <div className="flex flex-col">
@@ -149,12 +149,21 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <button
-                    onClick={() => handleFooterLinkClick(link.href)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-                  >
-                    {link.name}
-                  </button>
+                  {link.href.startsWith('#') ? (
+                    <button
+                      onClick={() => handleFooterLinkClick(link.href)}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left block"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -172,12 +181,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <button
-                    onClick={() => handleFooterLinkClick(link.href)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
+                  <Link
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left block"
                   >
                     {link.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

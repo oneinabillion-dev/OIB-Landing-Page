@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturedSection from "@/components/sections/FeaturedSection";
@@ -9,8 +10,25 @@ import PricingSection from "@/components/sections/PricingSection";
 import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/sections/Footer";
 import ShaderBackground from "@/components/ui/shader-background";
+import { useSEO } from "@/hooks/useSEO";
 
 const Index = () => {
+  // SEO for homepage
+  useSEO({
+    title: "One In a Billion (OIB) - Rare Meets Real | My OIB",
+    description: "One In a Billion (OIB) empowers entrepreneurs and businesses with cutting-edge AI solutions, expert consulting, and startup incubation. Transform your rare ideas into real ventures with My OIB.",
+    canonical: "https://myoib.com/",
+    ogTitle: "One In a Billion (OIB) - Rare Meets Real",
+    ogDescription: "One In a Billion (OIB) empowers entrepreneurs and businesses with cutting-edge AI solutions, expert consulting, and startup incubation.",
+    ogImage: "https://myoib.com/images/White_Logo.png",
+    breadcrumbs: [
+      { name: "Home", url: "https://myoib.com/" }
+    ]
+  });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0 }}
