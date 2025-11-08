@@ -32,6 +32,9 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    
+    <!-- Google Search Logo - Use larger favicon for search results -->
+    <link rel="icon" type="image/png" sizes="112x112" href="/images/android-chrome-192x192.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="One In a Billion (OIB) - Rare Meets Real" />
@@ -70,7 +73,14 @@
       "name": "One In a Billion",
       "alternateName": ["OIB", "My OIB", "myoib"],
       "url": "https://myoib.com",
-      "logo": "https://myoib.com/images/White_Logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://myoib.com/images/White_Logo.png",
+        "width": 512,
+        "height": 512,
+        "contentUrl": "https://myoib.com/images/White_Logo.png"
+      },
+      "image": "https://myoib.com/images/White_Logo.png",
       "description": "One In a Billion (OIB) - Your one-in-a-billion idea deserves one-in-a-billion execution that empowers entrepreneurs to transform rare ideas into successful ventures through cutting-edge technology solutions, strategic consulting, and comprehensive business support.",
       "foundingDate": "2025",
       "founders": [
@@ -105,6 +115,12 @@
       "name": "One In a Billion",
       "alternateName": ["OIB", "My OIB"],
       "url": "https://myoib.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://myoib.com/images/White_Logo.png",
+        "width": 512,
+        "height": 512
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
