@@ -20,7 +20,7 @@ const Contact = () => {
     canonical: "https://myoib.com/contact",
     ogTitle: "Contact Us | One In a Billion (OIB)",
     ogDescription: "Get in touch with One In a Billion. Contact us for AI consulting, startup incubation, and business transformation services.",
-    ogImage: "https://myoib.com/images/White_Logo.png",
+    ogImage: "https://myoib.com/favicons/OIB-LOGO.png",
     breadcrumbs: [
       { name: "Home", url: "https://myoib.com/" },
       { name: "Contact", url: "https://myoib.com/contact" }

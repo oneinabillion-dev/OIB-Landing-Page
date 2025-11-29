@@ -19,7 +19,7 @@ const About = () => {
     canonical: "https://myoib.com/about",
     ogTitle: "About Us | One In a Billion (OIB)",
     ogDescription: "Learn about One In a Billion (OIB). Empowering businesses with cutting-edge AI solutions and strategic consulting.",
-    ogImage: "https://myoib.com/images/White_Logo.png",
+    ogImage: "https://myoib.com/favicons/OIB-LOGO.png",
     breadcrumbs: [
       { name: "Home", url: "https://myoib.com/" },
       { name: "About", url: "https://myoib.com/about" }

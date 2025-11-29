@@ -20,7 +20,7 @@ const Index = () => {
     canonical: "https://myoib.com/",
     ogTitle: "One In a Billion (OIB) - Rare Meets Real",
     ogDescription: "One In a Billion (OIB) empowers entrepreneurs and businesses with cutting-edge AI solutions, expert consulting, and startup incubation.",
-    ogImage: "https://myoib.com/images/White_Logo.png",
+    ogImage: "https://myoib.com/favicons/OIB-LOGO.png",
     breadcrumbs: [
       { name: "Home", url: "https://myoib.com/" }
     ]

@@ -18,7 +18,7 @@ const Privacy = () => {
     canonical: "https://myoib.com/privacy",
     ogTitle: "Privacy Policy | One In a Billion (OIB)",
     ogDescription: "Read the Privacy Policy for One In a Billion (OIB). Learn how we collect, use, and protect your personal information.",
-    ogImage: "https://myoib.com/images/White_Logo.png",
+    ogImage: "https://myoib.com/favicons/OIB-LOGO.png",
     breadcrumbs: [
       { name: "Home", url: "https://myoib.com/" },
       { name: "Privacy Policy", url: "https://myoib.com/privacy" }

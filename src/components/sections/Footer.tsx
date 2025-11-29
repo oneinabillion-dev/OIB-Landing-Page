@@ -77,7 +77,7 @@ const Footer = () => {
             >
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="/images/White_Logo.png" 
+                  src="/favicons/OIB-LOGO.png" 
                   alt="One In a Billion Logo - OIB" 
                   className="w-8 h-8 flex-shrink-0" 
                 />

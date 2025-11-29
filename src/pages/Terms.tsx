@@ -18,7 +18,7 @@ const Terms = () => {
     canonical: "https://myoib.com/terms",
     ogTitle: "Terms of Service | One In a Billion (OIB)",
     ogDescription: "Read the Terms of Service for One In a Billion (OIB). Learn about our service terms, user conduct, and policies.",
-    ogImage: "https://myoib.com/images/White_Logo.png",
+    ogImage: "https://myoib.com/favicons/OIB-LOGO.png",
     breadcrumbs: [
       { name: "Home", url: "https://myoib.com/" },
       { name: "Terms of Service", url: "https://myoib.com/terms" }
