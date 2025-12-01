@@ -6,6 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { NeumaButton } from "@/components/ui/neuma-button";
 import { EnvelopeSimple, MapPin, Phone } from "phosphor-react";
 import { useSEO } from "@/hooks/useSEO";
+import { supabase } from "@/lib/supabase";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   // Scroll to top when component mounts
@@ -34,10 +36,63 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    
+    // Prevent double submission
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Insert data into Supabase
+      const { data, error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name.trim(),
+            email: formData.email.trim(),
+            subject: formData.subject.trim(),
+            message: formData.message.trim()
+          }
+        ])
+        .select();
+
+      if (error) {
+        throw error;
+      }
+
+      // Success - show toast notification
+      toast({
+        title: "Successfully Submitted!",
+        description: "We've received your message and will get back to you ASAP.",
+        variant: "default",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      
+      // Error - show toast notification
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -185,8 +240,8 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <NeumaButton type="submit" className="w-full">
-                    Send Message
+                  <NeumaButton type="submit" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </NeumaButton>
                 </form>
               </motion.div>
