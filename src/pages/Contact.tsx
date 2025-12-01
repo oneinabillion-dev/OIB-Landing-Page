@@ -210,25 +210,38 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <motion.div
-                      key={info.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      className="glass rounded-xl p-6 flex items-start space-x-4"
-                    >
-                      <div className="w-12 h-12 glass rounded-xl flex items-center justify-center flex-shrink-0">
-                        <info.icon size={20} weight="light" className="text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium mb-1">{info.title}</h3>
-                        <p className="text-primary mb-1">{info.content}</p>
-                        <p className="text-sm text-muted-foreground">{info.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
+                  {contactInfo.map((info, index) => {
+                    const handleClick = () => {
+                      if (info.title === "Email") {
+                        window.location.href = `mailto:${info.content}`;
+                      } else if (info.title === "Phone") {
+                        window.location.href = `tel:${info.content.replace(/\s/g, '')}`;
+                      } else if (info.title === "Office") {
+                        window.open("https://maps.app.goo.gl/SyoGZQmzGv2rajsv9", "_blank");
+                      }
+                    };
+
+                    return (
+                      <motion.div
+                        key={info.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="glass rounded-xl p-6 flex items-start space-x-4 cursor-pointer hover:bg-accent/5 transition-colors"
+                        onClick={handleClick}
+                      >
+                        <div className="w-12 h-12 glass rounded-xl flex items-center justify-center flex-shrink-0">
+                          <info.icon size={20} weight="light" className="text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-medium mb-1">{info.title}</h3>
+                          <p className="text-primary mb-1">{info.content}</p>
+                          <p className="text-sm text-muted-foreground">{info.description}</p>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
                 </div>
 
                 {/* FAQ Link */}

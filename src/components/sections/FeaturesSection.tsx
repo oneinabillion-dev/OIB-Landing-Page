@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
-import { Brain, Shield, TrendUp, Lightbulb } from "phosphor-react";
+import { ClipboardText, Code, Scales, Megaphone } from "phosphor-react";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI Strategy Development",
-      description: "Custom AI solutions tailored to your business needs with advanced machine learning capabilities"
+      icon: ClipboardText,
+      title: "Idea Validation & Business Planning",
+      description: "Market research\nStrategic business model creation\nTransforming abstract ideas into actionable plans"
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security protocols ensuring your data and business intelligence remain protected"
+      icon: Code,
+      title: "Design and Development Services",
+      description: "Brand identity and product design\nApp & web development\nEnd-to-end product development"
     },
     {
-      icon: TrendUp,
-      title: "Growth Optimization",
-      description: "Data-driven insights and automation strategies to accelerate your business growth"
+      icon: Scales,
+      title: "Legal & Administrative Setup",
+      description: "Company registration\nCompliance and contracts\nLegal advisory"
     },
     {
-      icon: Lightbulb,
-      title: "Innovation Consulting",
-      description: "Expert guidance on emerging technologies and digital transformation strategies"
+      icon: Megaphone,
+      title: "Marketing & Go-to-Market Strategy",
+      description: "Brand positioning\nDigital campaigns\nPR, and launch strategy"
     }
   ];
 
@@ -61,9 +61,9 @@ const FeaturesSection = () => {
                 {feature.title}
               </h3>
               
-              <p className="text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground whitespace-pre-line">
                 {feature.description}
-              </p>
+              </div>
             </motion.div>
           ))}
         </div>
